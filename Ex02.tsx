@@ -1,5 +1,11 @@
 // Mini-exercice 🎯
 // Pour valider cette leçon, regarde ce bout de code écrit par un stagiaire (il est volontairement faux).
+export const header = () => {
+  return (
+    <nav class="navbar">Logo</nav>
+    <div>Menu de navigation</div>
+  )
+}
 
 // Voici le code final du stagiaire, entièrement corrigé :
 // 1. Majuscule au nom du composant

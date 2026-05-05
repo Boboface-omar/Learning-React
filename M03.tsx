@@ -39,10 +39,19 @@ export const App = () => {
     </div>
   );
 };
+// Explication technique ⚙️
+// En React, le flux de données est unidirectionnel (Top-Down). Les données "coulent" toujours du Parent vers l'Enfant. Jamais l'inverse.
+// Sous le capot, toutes les props que tu passes à un composant sont regroupées dans un seul gros objet JavaScript en lecture seule (Read-Only).
 
 // Bonnes pratiques 🏆
 
 // Déstructuration : Ne fais jamais (props: Props) => { return props.title }. Déstructure directement dans les paramètres ({ title, price }) comme dans mon exemple. C'est plus lisible.
+
+// Erreurs fréquentes ⚠️
+
+// Essayer de modifier une prop : Les props sont IMMUABLES. Si tu essaies de faire title = "Nouveau titre" à l'intérieur de ton composant ProductCard, React va hurler et ton app va crasher. Un composant ne modifie jamais les props qu'il reçoit.
+
+// Oublier les accolades pour les nombres ou les booléens : Quand tu passes une string, tu fais title="Clavier". Mais pour tout le reste (nombres, booléens, objets, variables), tu DOIS utiliser des accolades : price={49.99}. Si tu fais price="49.99", tu passes une string, et ton TypeScript va te gronder.
 
 // Typage strict : En TS, chaque composant doit avoir son interface de Props nommée NomDuComposantProps.
 

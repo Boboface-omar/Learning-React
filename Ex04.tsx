@@ -16,3 +16,24 @@
 // Bonus Tech Lead : Essaie de faire en sorte que l'utilisateur ne puisse pas descendre en dessous de 1 (pas de quantité négative ou à zéro).
 
 // Montre-moi ton code !
+
+import { useState } from 'react';
+
+export const QuantitySelector = () => {
+  // 1. On stocke un nombre (la quantité), qui commence à 1
+  const [quantity, setQuantity] = useState<number>(1);
+
+  return (
+    // 2. On utilise le Fragment correctement pour englober le tout
+    <>
+      {/* 3. Au clic, on met à jour le state en soustrayant 1 */}
+      <button onClick={() => setQuantity(quantity - 1)}>-</button>
+      
+      {/* 4. On affiche la valeur de notre state */}
+      <span> {quantity} </span>
+      
+      {/* 5. Au clic, on met à jour le state en ajoutant 1 */}
+      <button onClick={() => setQuantity(quantity + 1)}>+</button>
+    </>
+  );
+};

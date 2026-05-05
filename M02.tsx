@@ -26,6 +26,10 @@ export const ProductCard = () => {
     </div>
   );
 };
+// Explication technique ⚙️
+// Le navigateur web est bête : il ne comprend que le HTML, le CSS et le JavaScript standard. Il ne sait pas ce qu'est le JSX.
+// Sous le capot, quand tu compiles ton projet (avec Vite, Webpack, etc.), un outil transforme ton JSX en vraies fonctions JavaScript natives.
+// Ton <div>Bonjour</div> devient en réalité React.createElement('div', null, 'Bonjour'). Le JSX n'est que du "sucre syntaxique" inventé pour t'éviter d'écrire des milliers de createElement.
 
 // // Bonnes pratiques 🏆
 
