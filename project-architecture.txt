@@ -24,3 +24,51 @@ Voici une proposition d'architecture pour un projet React :
 4. **.env** : Le fichier de configuration pour les variables d'environnement.
 5. **README.md** : Le fichier de documentation du projet, expliquant comment installer, lancer et contribuer au projet.
 Cette architecture permet de maintenir une séparation claire des responsabilités, facilite la réutilisation des composants, et rend le projet plus facile à maintenir et à faire évoluer. Bien sûr, il est important d'adapter cette structure en fonction des besoins spécifiques de votre projet.
+
+index.css : Le style global 🌍
+Ce fichier est importé dans ton point d'entrée principal (main.jsx ou index.js). Son rôle est de définir les règles CSS qui vont s'appliquer à l'ensemble de ton site web, peu importe le composant qui est actuellement affiché à l'écran.
+C'est ici que tu vas généralement placer :
+Les réglages de base des balises <body> ou <html> (comme la couleur de fond de la page entière).
+La police d'écriture par défaut pour tout ton projet.
+Les "resets" CSS (par exemple, forcer les marges à zéro avec * { margin: 0; padding: 0; }).
+Tes variables CSS globales (comme la palette de couleurs officielle de ton site).
+
+App.css : Le style du composant principal 🎨
+Ce fichier est importé spécifiquement dans ton fichier App.jsx (ou App.js). Son rôle est de styliser uniquement ce qui se trouve à l'intérieur du composant App.
+C'est ici que tu vas mettre :
+La disposition générale de l'interface (comme utiliser Flexbox ou Grid pour centrer le contenu spécifique de App).
+Les règles de design pour les éléments qui sont directement écrits dans la fonction App().
+
+La différence entre pages/ et components/
+Le dossier src/pages/ :
+Il contient les composants qui représentent des écrans complets de ton site (ceux qui correspondent généralement à une URL spécifique).
+
+Exemples : Home.jsx (Page d'accueil), Contact.jsx (Page de contact), Profile.jsx (Profil de l'utilisateur).
+
+Le dossier src/components/ :
+Il contient les petits morceaux d'interface réutilisables qui vont venir construire tes pages.
+
+Exemples : Navbar.jsx (Barre de navigation), Button.jsx (Un bouton stylisé), Footer.jsx (Le pied de page).
+
+
+
+1. Les fichiers à NE PAS toucher 🛑
+node_modules/ : Ce dossier contient toutes les bibliothèques dont React a besoin pour fonctionner.
+
+package.json et package-lock.json : Ils listent les dépendances de ton projet.
+
+public/index.html : C'est la page web de base où ton application React va s'injecter.
+
+src/main.jsx (ou index.js selon l'outil utilisé) : C'est le point d'entrée de ton application qui relie React à ton fichier HTML.
+
+2. Les fichiers que tu peux supprimer 🗑️
+Dans le dossier src/, tu vas trouver des fichiers d'exemple (logos, styles par défaut) dont tu n'as pas besoin. Tu peux supprimer :
+
+Les fichiers SVG ou images (ex: logo.svg, react.svg).
+
+Les fichiers de tests si tu ne comptes pas en faire tout de suite (ex: App.test.js ou setupTests.js).
+
+(Optionnel) Tu peux effacer le contenu des fichiers App.css et index.css si tu veux écrire ton propre style de zéro, sans être gêné par le style de base.
+
+3. Nettoyer ton composant principal (App.jsx ou App.js) 🧹
+C'est ici que tu vas vraiment faire place nette. Ouvre ton fichier App et supprime tout le code d'exemple (les logos qui tournent, les boutons compteurs, etc.).

@@ -1,0 +1,18 @@
+src/
+│
+├── assets/          # Tes images, icônes, polices (ex: logo.png)
+│
+├── components/      # Tes petits composants réutilisables
+│   ├── Navbar.jsx
+│   └── Navbar.css
+│
+├── pages/           # Tes écrans complets
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── Contact.jsx
+│   └── Contact.css
+│
+├── App.jsx          # Le chef d'orchestre qui charge tes pages
+├── App.css
+├── main.jsx         # Le point d'entrée technique
+└── index.css        # Le style global
