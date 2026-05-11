@@ -70,5 +70,5 @@ Les fichiers de tests si tu ne comptes pas en faire tout de suite (ex: App.test.
 
 (Optionnel) Tu peux effacer le contenu des fichiers App.css et index.css si tu veux écrire ton propre style de zéro, sans être gêné par le style de base.
 
-3. Nettoyer ton composant principal (App.jsx ou App.js) 🧹
+3. Nettoyer ton composant principal (App.tsx ou App.js) 🧹
 C'est ici que tu vas vraiment faire place nette. Ouvre ton fichier App et supprime tout le code d'exemple (les logos qui tournent, les boutons compteurs, etc.).

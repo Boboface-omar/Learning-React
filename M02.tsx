@@ -1,6 +1,7 @@
 // // // Leçon 2 : JSX et les Composants (La base fondamentale)
 // // // Explication simple 📝
-// // // Un composant React n'est rien d'autre qu'une fonction JavaScript/TypeScript qui retourne de l'interface. L'interface qu'elle retourne est écrite en JSX (JavaScript XML), une syntaxe qui ressemble comme deux gouttes d'eau à du HTML, mais qui vit directement dans ton code TSX.
+// // // Un composant React n'est rien d'autre qu'une fonction JavaScript/TypeScript qui retourne de l'interface. 
+// L'interface qu'elle retourne est écrite en JSX (JavaScript XML), une syntaxe qui ressemble comme deux gouttes d'eau à du HTML, mais qui vit directement dans ton code TSX.
 
 // // Analogie concrète 🧱
 // // Pense à une usine de tampons encreurs.
@@ -14,7 +15,7 @@
 
 // // // 1. Le composant est une fonction fléchée avec une Majuscule
 export const ProductCard = () => {
-  const price = 49.99; // On peut mettre du JS classique avant le return
+  const price: number = 49.99; // On peut mettre du JS classique avant le return
 
   // 2. Le return contient le JSX
   return (
@@ -47,3 +48,20 @@ export const ProductCard = () => {
 
 // Tips de senior 💡
 // En entreprise, un fichier de composant qui dépasse les 150-200 lignes est souvent un "code smell" (une mauvaise odeur). Si ton JSX est trop long à scroller, c'est que ton composant fait trop de choses. C'est le moment d'extraire des morceaux pour en faire de nouveaux sous-composants plus petits.
+
+// Pour appeler un composant React dans une page, tu dois :
+
+// 1. l’importer
+// 2. l’insérer dans le JSX avec une balise <NomDuComposant />
+import MonComposant from './MonComposant';
+
+function Page() {
+  return (
+    <div>
+      <MonComposant />
+    </div>
+  );
+}
+
+export default Page;
+// Le plus important : un composant React s’utilise toujours comme une balise JSX auto-fermante <MonComposant /> ou avec enfants <MonComposant>...</MonComposant>.

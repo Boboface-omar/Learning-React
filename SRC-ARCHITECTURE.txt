@@ -13,6 +13,6 @@ src/
 │   └── Contact.css
 │
 ├── App.jsx          # Le chef d'orchestre qui charge tes pages
-├── App.css
+├── App.css          # Le style d'un composant
 ├── main.jsx         # Le point d'entrée technique
 └── index.css        # Le style global

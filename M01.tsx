@@ -1,6 +1,7 @@
 // Leçon 1 : C'est quoi React et pourquoi on l'utilise ?
 // Explication simple 📝
-// React est une bibliothèque JavaScript/TypeScript (créée par Facebook) pour construire des interfaces utilisateur. Son but principal est d'afficher des données à l'écran de manière dynamique et de réagir aux actions de l'utilisateur (clics, saisies) sans jamais avoir à recharger la page.
+// React est une bibliothèque JavaScript/TypeScript (créée par Facebook) pour construire des interfaces utilisateur. 
+// Son but principal est d'afficher des données à l'écran de manière dynamique et de réagir aux actions de l'utilisateur (clics, saisies) sans jamais avoir à recharger la page.
 
 // Analogie concrète 🧱
 // Imagine des briques LEGO. Si tu veux construire un immense vaisseau spatial, tu ne vas pas le sculpter dans un seul bloc de plastique géant. Tu vas assembler des petites briques (réacteurs, fenêtres, ailes).
@@ -17,8 +18,10 @@
 // Un composant <TweetCard /> (qu'on va réutiliser des dizaines de fois dans la liste, en lui passant des données différentes).
 
 // Explication technique ⚙️
-// Avant React, on codait de manière impérative (avec Vanilla JS ou jQuery) : on devait donner les instructions exactes au navigateur ("trouve le bouton avec cet ID, écoute le clic, va chercher le paragraphe avec cet autre ID, change son texte").
-// React introduit le paradigme déclaratif. Tu décris simplement l'état final désiré ("Si l'utilisateur est connecté, affiche son nom, sinon affiche un bouton Login"). Quand les données changent, React calcule la différence et met à jour le navigateur (le DOM) de manière chirurgicale et optimisée grâce à son moteur interne : le Virtual DOM.
+// Avant React, on codait de manière impérative (avec Vanilla JS ou jQuery) : on devait donner les instructions exactes au navigateur 
+// ("trouve le bouton avec cet ID, écoute le clic, va chercher le paragraphe avec cet autre ID, change son texte").
+// React introduit le paradigme déclaratif. Tu décris simplement l'état final désiré ("Si l'utilisateur est connecté, affiche son nom, sinon affiche un bouton Login"). Quand les données changent, 
+// React calcule la différence et met à jour le navigateur (le DOM) de manière chirurgicale et optimisée grâce à son moteur interne : le Virtual DOM.
 
 // Bonnes pratiques 🏆
 
